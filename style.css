@@ -1,0 +1,162 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    min-height: 100vh;
+    height: 100vh;
+}
+.container{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background-image: url('https://4kwallpapers.com/images/wallpapers/mountains-reflections-minimal-render-digital-composition-5k-1920x1080-38.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    filter: brightness(70%);
+}
+.glow{
+   width:36%;
+   height:75%;
+   position: relative;
+   z-index: -1;
+}
+.card{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.368);
+    /* background: linear-gradient(0deg, black, rgb(44, 43,43)); */
+    backdrop-filter: blur(16px) saturate(180%);
+    border: 2px solid white;
+    border-radius: 10px;
+    position: relative;
+    opacity: 0.6;
+    cursor: pointer;
+    display: block;
+}
+.card .photo{
+    width: 100%;
+    height: 50%;
+}
+.photo .profileP{
+    width: 190px;
+    height: 220px;
+    object-fit: cover;
+    position: absolute;
+    top: 5%;
+    left: 32%; 
+}
+.profileP img{
+    width: 100%;
+    height: 100%;
+    border-radius: 280px;
+    filter:drop-shadow(5px 5px 5px rgba(255, 255, 0, 0.352))
+} 
+.me{
+    width: 100%;
+    height: 25%;
+
+    text-align: center;
+}
+.me .about{
+    width: 100%;
+    height: 100%;
+}
+.about a{
+    text-decoration: none;
+}
+.about a p{
+    color: black;
+}
+.about a p i{
+    font-size: 15px;
+}
+.about p{
+    text-align: center;
+    font-size: 30px;
+    color: white;
+    font-weight: bold;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    margin-bottom: 10px;
+}
+.portfolio{
+    font-size: 30px;
+    color: aqua;
+}
+.portfolio:hover{
+    color: tomato;
+}
+.social{
+    width: 100%;
+    height: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.social i{
+    margin-right: 35px; 
+    font-size: 30px; 
+}
+.social a{
+    color: black;
+    transition: transform 0.5s;
+}
+.social a:hover{
+    color:rgb(249, 6, 71);
+    transform: translateY(-5px);
+}
+.social p{
+    font-size: 17px;
+}
+
+.card:hover{
+    opacity: 1;
+    >.photo{
+        >.profileP{
+            >img{
+                filter:drop-shadow(5px 5px 5px rgb(255, 255, 0))
+            }
+        }
+    }
+    >.me{
+        >.about{
+            >p{
+                color: rgb(199, 0, 93);
+            }
+            >a{
+                >p{
+                    color: yellow;
+                }
+            } 
+        }
+    }  
+}
+/* .glow::before, .glow::after{
+    content: ' ';
+    position: absolute;
+    border-radius: 10px; 
+    left: -2px;
+    top: -2px;
+    /* background: linear-gradient(45deg, #e6fb04, #ff6600, #00ff66, #00ffff, #ff00ff, #ff0099, #6e0dd0, #ff3300, #099fff);
+    background-size: 410%;
+    width: calc(100% + 6px);
+    height: calc(100% + 6px);
+    z-index: -1;
+    animation: animate 20s linear infinite;
+} 
+
+@keyframes animate{
+    0%{
+        background-position: 0 0;
+    }
+    50%{
+        background-position: 410% 0; 
+    }
+    100%{
+        background-position: 0 0;
+    }
+}  */
